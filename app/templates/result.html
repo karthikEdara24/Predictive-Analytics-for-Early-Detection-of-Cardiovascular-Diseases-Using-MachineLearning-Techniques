@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prediction Result</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      text-align: center;
+      padding-top: 50px;
+    }
+    .result-box {
+      display: inline-block;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    .high-risk {
+      color: #dc3545;
+      font-size: 1.5em;
+    }
+    .low-risk {
+      color: #28a745;
+      font-size: 1.5em;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      text-decoration: none;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <div class="result-box">
+    <h2>Prediction Result</h2>
+    <p class="{{ 'high-risk' if 'High' in prediction else 'low-risk' }}">{{ prediction }}</p>
+    <a href="/">Back to Form</a>
+  </div>
+</body>
+</html>
