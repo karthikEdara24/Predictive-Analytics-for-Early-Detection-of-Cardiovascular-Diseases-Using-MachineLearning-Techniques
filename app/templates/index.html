@@ -46,11 +46,6 @@
   <h2 style="text-align:center;">Early Prediction of Cardio Vascular Disease</h2>
   <form method="POST" action="/predict">
     <label>Age:</label><input type="text" name="Age" required>
-    <label>Resting Blood Pressure:</label><input type="text" name="RestingBP" required>
-    <label>Cholesterol:</label><input type="text" name="Cholesterol" required>
-    <label>Fasting Blood Sugar:</label><input type="text" name="FastingBS" required>
-    <label>Max Heart Rate:</label><input type="text" name="MaxHR" required>
-    <label>Oldpeak:</label><input type="text" name="Oldpeak" required>
     <label>Sex:</label>
     <select name="Sex" required>
       <option value="1">Male</option>
@@ -63,17 +58,22 @@
       <option value="1">NAP</option>
       <option value="0">TA</option>
     </select>
+    <label>Resting Blood Pressure:</label><input type="text" name="RestingBP" required>
+    <label>Cholesterol:</label><input type="text" name="Cholesterol" required>
+    <label>Fasting Blood Sugar:</label><input type="text" name="FastingBS" required>
     <label>Resting ECG:</label>
     <select name="RestingECG" required>
       <option value="2">LVH</option>
       <option value="1">Normal</option>
       <option value="0">ST</option>
     </select>
+    <label>Max Heart Rate:</label><input type="text" name="MaxHR" required>
     <label>Exercise Induced Angina:</label>
     <select name="ExerciseAngina" required>
       <option value="1">Yes</option>
       <option value="0">No</option>
     </select>
+    <label>Oldpeak:</label><input type="text" name="Oldpeak" required>
     <label>ST Slope:</label>
     <select name="ST_Slope" required>
       <option value="2">Down</option>
