@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 flask
 pandas
 numpy
 scikit-learn
 xgboost
 matplotlib
+=======
+flask
+pandas
+numpy
+scikit-learn
+xgboost
+matplotlib
+>>>>>>> 156e575 (Initial commit)

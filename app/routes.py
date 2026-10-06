@@ -28,15 +28,15 @@ def predict():
     if request.method == 'POST':
         form_data = [
             float(request.form['Age']),
+            float(request.form['Sex']),
+            float(request.form['ChestPainType']),
             float(request.form['RestingBP']),
             float(request.form['Cholesterol']),
             float(request.form['FastingBS']),
-            float(request.form['MaxHR']),
-            float(request.form['Oldpeak']),
-            float(request.form['Sex']),
-            float(request.form['ChestPainType']),
             float(request.form['RestingECG']),
+            float(request.form['MaxHR']),
             float(request.form['ExerciseAngina']),
+            float(request.form['Oldpeak']),
             float(request.form['ST_Slope'])
         ]
         prediction = model.predict(transform_input(form_data))[0]
