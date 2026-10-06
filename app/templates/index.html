@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Cardiovascular Disease Prediction</title>
+  <title>Heart Disease Prediction</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -43,39 +43,39 @@
   </style>
 </head>
 <body>
-  <h2 style="text-align:center;">Cardiovascular Disease Prediction</h2>
+  <h2 style="text-align:center;">Early Prediction of Cardio Vascular Disease</h2>
   <form method="POST" action="/predict">
-    <label>Age:</label><input type="text" name="Age">
-    <label>Resting Blood Pressure:</label><input type="text" name="RestingBP">
-    <label>Cholesterol:</label><input type="text" name="Cholesterol">
-    <label>Fasting Blood Sugar:</label><input type="text" name="FastingBS">
-    <label>Max Heart Rate:</label><input type="text" name="MaxHR">
-    <label>Oldpeak:</label><input type="text" name="Oldpeak">
+    <label>Age:</label><input type="text" name="Age" required>
     <label>Sex:</label>
-    <select name="Sex">
+    <select name="Sex" required>
       <option value="1">Male</option>
       <option value="0">Female</option>
     </select>
     <label>Chest Pain Type:</label>
-    <select name="ChestPainType">
+    <select name="ChestPainType" required>
       <option value="3">ASY</option>
       <option value="2">ATA</option>
       <option value="1">NAP</option>
       <option value="0">TA</option>
     </select>
+    <label>Resting Blood Pressure:</label><input type="text" name="RestingBP" required>
+    <label>Cholesterol:</label><input type="text" name="Cholesterol" required>
+    <label>Fasting Blood Sugar:</label><input type="text" name="FastingBS" required>
     <label>Resting ECG:</label>
-    <select name="RestingECG">
+    <select name="RestingECG" required>
       <option value="2">LVH</option>
       <option value="1">Normal</option>
       <option value="0">ST</option>
     </select>
+    <label>Max Heart Rate:</label><input type="text" name="MaxHR" required>
     <label>Exercise Induced Angina:</label>
-    <select name="ExerciseAngina">
+    <select name="ExerciseAngina" required>
       <option value="1">Yes</option>
       <option value="0">No</option>
     </select>
+    <label>Oldpeak:</label><input type="text" name="Oldpeak" required>
     <label>ST Slope:</label>
-    <select name="ST_Slope">
+    <select name="ST_Slope" required>
       <option value="2">Down</option>
       <option value="1">Flat</option>
       <option value="0">Up</option>
@@ -83,6 +83,4 @@
     <input type="submit" value="Predict">
   </form>
 </body>
-
 </html>
-
