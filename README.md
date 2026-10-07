@@ -40,8 +40,8 @@ This project leverages machine learning algorithms such as Logistic Regression, 
 
 1. **Clone the repository**:
 ```bash
-git clone https://github.com/karthikEdara24/Cardiovascular-Disease-Prediction-Flask.git
-cd Cardiovascular-Disease-Prediction-Flask
+git clone https://github.com/karthikEdara24/Predictive-Analytics-for-Early-Detection-of-Cardiovascular-Diseases-Using-MachineLearning-Techniques
+cd Predictive-Analytics-for-Early-Detection-of-Cardiovascular-Diseases-Using-MachineLearning-Techniques
 ````
 
 2. **Create and activate virtual environment**:
