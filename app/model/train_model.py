@@ -33,14 +33,20 @@ X = data.drop('HeartDisease', axis=1)
 y = data['HeartDisease']
 
 # Feature Scaling
-scaler = StandardScaler()
-X_scaled = scaler.fit_transform(X)
+# scaler = StandardScaler()
+# X_scaled = scaler.fit_transform(X)
 
-X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
+# X_train, X_test, y_train, y_test = train_test_split(X_scaled, y, test_size=0.2, random_state=42)
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
 
 
 # Feature selection using RFE
-rf = RandomForestClassifier(n_estimators=100, random_state=42)
+rf = RandomForestClassifier(n_estimators=100, class_weight="balanced", random_state=42)
 rfe = RFE(estimator=rf, n_features_to_select=8)
 rfe.fit(X_train, y_train)
 
@@ -50,7 +56,7 @@ X_test = rfe.transform(X_test)
 # Define models
 knn = KNeighborsClassifier(n_neighbors=5)
 svm = SVC(probability=True, random_state=42)
-lr = LogisticRegression(random_state=42)
+lr = LogisticRegression(class_weight="balanced", random_state=42)
 xgb = XGBClassifier(use_label_encoder=False, eval_metric='logloss', random_state=42)
 
 # Hyperparameter tuning (simplified)
