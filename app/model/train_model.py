@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import pickle
 from sklearn.model_selection import train_test_split
@@ -19,7 +20,9 @@ warnings.filterwarnings("ignore", category=UserWarning)
 warnings.filterwarnings("ignore", category=ConvergenceWarning)
 
 # Load and preprocess data
-data = pd.read_csv(r'D:\Junk\Massion\CardioVascularPrediction\app\model\heart.csv')
+current_dir = os.path.dirname(__file__) 
+file_path = os.path.join(current_dir, 'heart.csv')
+data = pd.read_csv(file_path)
 data['Sex'] = data['Sex'].map({'M': 1, 'F': 0})
 data['ChestPainType'] = data['ChestPainType'].map({'ASY':3, 'ATA':2, 'NAP':1, 'TA':0})
 data['RestingECG'] = data['RestingECG'].map({'LVH':2, 'Normal':1, 'ST':0})
